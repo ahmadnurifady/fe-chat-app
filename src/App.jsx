@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-const ws = new WebSocket("ws://localhost:8080/cable");
+const ws = new WebSocket(`ws://${import.meta.env.VITE_URL_SOCKET}/cable`);
 
 function App() {
   const [messages, setMessages] = useState([]);
